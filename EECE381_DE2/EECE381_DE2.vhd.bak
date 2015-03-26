@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity EECE381_DE2 is
+	port(
+		reset : in std_logic;
+		clock : in std_logic;
+	);
+end EECE381_DE2;
+
+architecture BEHAVIOURAL of EECE381_DE2 is
+	--signals
+begin
+	process(clock, reset)
+		--variables
+	begin
+		if(reset = '0') then
+			
+		elsif(rising_edge(clock)) then
+			
+	end process;
+
+end BEHAVIOURAL;
