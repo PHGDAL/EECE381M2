@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'servoclk:servoclk_map|temporal'
+Slack : -1.576
+TNS   : -13.749
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -1.540
+TNS   : -11.318
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.557
+TNS   : -2.557
+
+Type  : Slow Model Hold 'servoclk:servoclk_map|temporal'
+Slack : 0.538
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -25.380
+
+Type  : Slow Model Minimum Pulse Width 'servoclk:servoclk_map|temporal'
+Slack : -0.500
+TNS   : -12.000
+
+Type  : Fast Model Setup 'servoclk:servoclk_map|temporal'
+Slack : -0.173
+TNS   : -0.860
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.171
+TNS   : -0.503
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.597
+TNS   : -1.597
+
+Type  : Fast Model Hold 'servoclk:servoclk_map|temporal'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -25.380
+
+Type  : Fast Model Minimum Pulse Width 'servoclk:servoclk_map|temporal'
+Slack : -0.500
+TNS   : -12.000
+
+------------------------------------------------------------
