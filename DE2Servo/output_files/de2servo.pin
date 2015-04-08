@@ -525,7 +525,7 @@ VCCINT                       : M16       : power  :                   : 1.2V    
 VCCINT                       : M17       : power  :                   : 1.2V    :           :                
 VCCIO5                       : M18       : power  :                   : 3.3V    : 5         :                
 GPIO_1[4]                    : M19       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-GND*                         : M20       :        :                   :         : 5         :                
+GPIO_1[5]                    : M20       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
 GND*                         : M21       :        :                   :         : 5         :                
 GPIO_1[2]                    : M22       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
 GPIO_1[3]                    : M23       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
