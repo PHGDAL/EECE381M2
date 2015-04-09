@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de2servo
-Wed Apr 08 22:44:09 2015
+Thu Apr 09 13:48:36 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 08 22:44:09 2015           ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 09 13:48:36 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; de2servo                                        ;
 ; Top-level Entity Name              ; de2servo                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 139                                             ;
-;     Total combinational functions  ; 121                                             ;
-;     Dedicated logic registers      ; 64                                              ;
-; Total registers                    ; 64                                              ;
-; Total pins                         ; 45                                              ;
+; Total logic elements               ; 173                                             ;
+;     Total combinational functions  ; 146                                             ;
+;     Dedicated logic registers      ; 73                                              ;
+; Total registers                    ; 73                                              ;
+; Total pins                         ; 47                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -173,28 +173,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 139    ;
+; Estimated Total logic elements              ; 173    ;
 ;                                             ;        ;
-; Total combinational functions               ; 121    ;
+; Total combinational functions               ; 146    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 48     ;
-;     -- 3 input functions                    ; 24     ;
-;     -- <=2 input functions                  ; 49     ;
+;     -- 4 input functions                    ; 53     ;
+;     -- 3 input functions                    ; 33     ;
+;     -- <=2 input functions                  ; 60     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 65     ;
-;     -- arithmetic mode                      ; 56     ;
+;     -- normal mode                          ; 72     ;
+;     -- arithmetic mode                      ; 74     ;
 ;                                             ;        ;
-; Total registers                             ; 64     ;
-;     -- Dedicated logic registers            ; 64     ;
+; Total registers                             ; 73     ;
+;     -- Dedicated logic registers            ; 73     ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 45     ;
+; I/O pins                                    ; 47     ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; KEY[3] ;
 ; Maximum fan-out                             ; 35     ;
-; Total fan-out                               ; 531    ;
-; Average fan-out                             ; 2.31   ;
+; Total fan-out                               ; 643    ;
+; Average fan-out                             ; 2.42   ;
 +---------------------------------------------+--------+
 
 
@@ -203,13 +203,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Library Name ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
-; |de2servo                        ; 121 (31)          ; 64 (29)      ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |de2servo                                                   ; work         ;
+; |de2servo                        ; 146 (39)          ; 73 (38)      ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |de2servo                                                   ; work         ;
 ;    |servolinked:servoHorizontal| ; 60 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal                       ; work         ;
 ;       |servoclk:servoclk_map|    ; 17 (17)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal|servoclk:servoclk_map ; work         ;
 ;       |servopwm:servopwm_map|    ; 43 (43)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal|servopwm:servopwm_map ; work         ;
-;    |servolinked:servoVertical|   ; 30 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical                         ; work         ;
+;    |servolinked:servoVertical|   ; 47 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical                         ; work         ;
 ;       |servoclk:servoclk_map|    ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical|servoclk:servoclk_map   ; work         ;
-;       |servopwm:servopwm_map|    ; 26 (26)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical|servopwm:servopwm_map   ; work         ;
+;       |servopwm:servopwm_map|    ; 43 (43)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical|servopwm:servopwm_map   ; work         ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -237,12 +237,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 64    ;
+; Total registers                              ; 73    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 35    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -252,7 +252,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |de2servo|Hpos[8]          ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |de2servo|Hpos[7]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -271,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 08 22:44:07 2015
+    Info: Processing started: Thu Apr 09 13:48:34 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2servo -c de2servo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file de2servo.vhd
@@ -289,7 +289,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file servoli
 Info (12127): Elaborating entity "de2servo" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at de2servo.vhd(11): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at de2servo.vhd(12): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at de2servo.vhd(26): used implicit default value for signal "Vpos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "servolinked" for hierarchy "servolinked:servoVertical"
 Info (12128): Elaborating entity "servoclk" for hierarchy "servolinked:servoVertical|servoclk:servoclk_map"
 Info (12128): Elaborating entity "servopwm" for hierarchy "servolinked:servoVertical|servopwm:servopwm_map"
@@ -325,35 +324,19 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]"
-    Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[5]"
-    Warning (15610): No output dependent on input pin "SW[6]"
-    Warning (15610): No output dependent on input pin "SW[7]"
-    Warning (15610): No output dependent on input pin "SW[8]"
-    Warning (15610): No output dependent on input pin "SW[9]"
-    Warning (15610): No output dependent on input pin "SW[10]"
-    Warning (15610): No output dependent on input pin "SW[11]"
-    Warning (15610): No output dependent on input pin "SW[12]"
-    Warning (15610): No output dependent on input pin "SW[13]"
-    Warning (15610): No output dependent on input pin "SW[14]"
-    Warning (15610): No output dependent on input pin "SW[15]"
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]"
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
-Info (21057): Implemented 184 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 21 input pins
+Info (21057): Implemented 220 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
     Info (21059): Implemented 18 output pins
     Info (21060): Implemented 6 bidirectional pins
-    Info (21061): Implemented 139 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 519 megabytes
-    Info: Processing ended: Wed Apr 08 22:44:09 2015
-    Info: Elapsed time: 00:00:02
+    Info (21061): Implemented 173 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 501 megabytes
+    Info: Processing ended: Thu Apr 09 13:48:37 2015
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

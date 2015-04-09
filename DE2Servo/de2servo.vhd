@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity de2servo is
     PORT(
 		  CLOCK_50	: IN STD_LOGIC;
-		  SW			: IN STD_LOGIC_VECTOR(15 downto 0);
+		  SW			: IN STD_LOGIC_VECTOR(17 downto 0);
 		  KEY			: IN STD_LOGIC_VECTOR(3 downto 0);
         GPIO_1		: INOUT STD_LOGIC_VECTOR(5 downto 0);
 		  LEDG		: OUT STD_LOGIC_VECTOR(8 downto 0);
@@ -75,8 +75,11 @@ begin
 				varY := unsigned(coordy);
 				if(varX = 0 and varY = 0) then
 				-- Idle
+				elsif(unsigned(SW(15 downto 0)) > 0) then
+					Vpos <= SW(17 downto 9);
+					Hpos <= SW(8 downto 0);
 				else
-					if(varX > 240) then
+					if(varX > 170) then
 					-- Move Right
 						if(unsigned(Hpos) < 75) then
 							Hpos <= std_logic_vector(unsigned(Hpos) + 1);
