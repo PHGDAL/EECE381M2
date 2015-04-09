@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de2servo
-Thu Apr 09 13:48:36 2015
+Thu Apr 09 16:01:16 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 09 13:48:36 2015           ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 09 16:01:16 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; de2servo                                        ;
 ; Top-level Entity Name              ; de2servo                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 173                                             ;
-;     Total combinational functions  ; 146                                             ;
+; Total logic elements               ; 212                                             ;
+;     Total combinational functions  ; 194                                             ;
 ;     Dedicated logic registers      ; 73                                              ;
 ; Total registers                    ; 73                                              ;
 ; Total pins                         ; 47                                              ;
@@ -173,17 +173,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 173    ;
+; Estimated Total logic elements              ; 212    ;
 ;                                             ;        ;
-; Total combinational functions               ; 146    ;
+; Total combinational functions               ; 194    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 53     ;
-;     -- 3 input functions                    ; 33     ;
-;     -- <=2 input functions                  ; 60     ;
+;     -- 4 input functions                    ; 70     ;
+;     -- 3 input functions                    ; 41     ;
+;     -- <=2 input functions                  ; 83     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 72     ;
-;     -- arithmetic mode                      ; 74     ;
+;     -- normal mode                          ; 104    ;
+;     -- arithmetic mode                      ; 90     ;
 ;                                             ;        ;
 ; Total registers                             ; 73     ;
 ;     -- Dedicated logic registers            ; 73     ;
@@ -193,8 +193,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; KEY[3] ;
 ; Maximum fan-out                             ; 35     ;
-; Total fan-out                               ; 643    ;
-; Average fan-out                             ; 2.42   ;
+; Total fan-out                               ; 788    ;
+; Average fan-out                             ; 2.51   ;
 +---------------------------------------------+--------+
 
 
@@ -203,7 +203,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Library Name ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
-; |de2servo                        ; 146 (39)          ; 73 (38)      ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |de2servo                                                   ; work         ;
+; |de2servo                        ; 194 (87)          ; 73 (38)      ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |de2servo                                                   ; work         ;
 ;    |servolinked:servoHorizontal| ; 60 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal                       ; work         ;
 ;       |servoclk:servoclk_map|    ; 17 (17)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal|servoclk:servoclk_map ; work         ;
 ;       |servopwm:servopwm_map|    ; 43 (43)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal|servopwm:servopwm_map ; work         ;
@@ -239,10 +239,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 73    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 35    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -252,7 +252,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |de2servo|Hpos[7]          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |de2servo|Vpos[8]          ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |de2servo|Hpos[8]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -271,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Apr 09 13:48:34 2015
+    Info: Processing started: Thu Apr 09 16:01:14 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2servo -c de2servo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file de2servo.vhd
@@ -328,15 +329,15 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]"
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
-Info (21057): Implemented 220 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 259 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 18 output pins
     Info (21060): Implemented 6 bidirectional pins
-    Info (21061): Implemented 173 logic cells
+    Info (21061): Implemented 212 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 501 megabytes
-    Info: Processing ended: Thu Apr 09 13:48:37 2015
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 509 megabytes
+    Info: Processing ended: Thu Apr 09 16:01:16 2015
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

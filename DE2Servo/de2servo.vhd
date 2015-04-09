@@ -27,7 +27,7 @@ architecture Behavioral of de2servo is
 	 signal Hpos	: STD_LOGIC_VECTOR(8 downto 0);
 	 signal coordx : STD_LOGIC_VECTOR(8 downto 0);
 	 signal coordy : STD_LOGIC_VECTOR(8 downto 0);
-	 signal Abbey	: STD_LOGIC;
+	 signal Inhibited	: STD_LOGIC;
 	
 	 type t_state is (idle, ready);
 begin
@@ -59,10 +59,10 @@ begin
 			
 			when idle =>
 				if(GPIO_1(2) = '1') then
-					Abbey <= '1';
+					Inhibited <= '1';
 				end if;
 			
-				if(GPIO_1(5) = '1' and Abbey = '1') then
+				if(GPIO_1(5) = '1' and Inhibited = '1') then
 					next_state := ready;
 				else
 					next_state := idle;
@@ -82,30 +82,30 @@ begin
 					if(varX > 170) then
 					-- Move Right
 						if(unsigned(Hpos) < 75) then
-							Hpos <= std_logic_vector(unsigned(Hpos) + 1);
+							Hpos <= std_logic_vector(unsigned(Hpos) + 5);
 						end if;
 					end if;
 					if(varX < 150) then
 					-- Move Left
 						if(unsigned(Hpos) > 5) then
-							Hpos <= std_logic_vector(unsigned(Hpos) - 1);
+							Hpos <= std_logic_vector(unsigned(Hpos) - 5);
 						end if;
 					end if;
 					
 					if(varY < 100) then
 					-- Move Up
 						if(unsigned(Vpos) < 54) then
-							--Vpos <= std_logic_vector(unsigned(Vpos) + 5);
+							Vpos <= std_logic_vector(unsigned(Vpos) + 5);
 						end if;
 					end if;
 					if(varY > 140) then
 					-- Move Down
 						if(unsigned(Vpos) > 25) then
-							--Vpos <= std_logic_vector(unsigned(Vpos) - 5);
+							Vpos <= std_logic_vector(unsigned(Vpos) - 5);
 						end if;
 					end if;
 				end if;
-				Abbey <= '0';
+				Inhibited <= '0';
 				next_state := idle;
 			end case;
 			current_state := next_state;
