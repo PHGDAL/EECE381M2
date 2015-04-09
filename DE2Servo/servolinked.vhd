@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity servolinked is
     PORT(
 		  clk			: IN STD_LOGIC;
-		  pos			: IN STD_LOGIC_VECTOR(7 downto 0);
+		  pos			: IN STD_LOGIC_VECTOR(8 downto 0);
 		  reset		: IN STD_LOGIC;
         servo		: OUT STD_LOGIC	  
     );
@@ -24,7 +24,7 @@ architecture Behavioral of servolinked is
         PORT (
             clk   : IN  STD_LOGIC;
             reset : IN  STD_LOGIC;
-            pos   : IN  STD_LOGIC_VECTOR(7 downto 0);
+            pos   : IN  STD_LOGIC_VECTOR(8 downto 0);
             servo : OUT STD_LOGIC
         );
     END COMPONENT;

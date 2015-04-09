@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de2servo
-Tue Apr 07 17:53:27 2015
+Wed Apr 08 22:44:09 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 07 17:53:27 2015           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 08 22:44:09 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; de2servo                                        ;
 ; Top-level Entity Name              ; de2servo                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 159                                             ;
-;     Total combinational functions  ; 143                                             ;
-;     Dedicated logic registers      ; 69                                              ;
-; Total registers                    ; 69                                              ;
-; Total pins                         ; 30                                              ;
+; Total logic elements               ; 139                                             ;
+;     Total combinational functions  ; 121                                             ;
+;     Dedicated logic registers      ; 64                                              ;
+; Total registers                    ; 64                                              ;
+; Total pins                         ; 45                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -156,16 +156,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                      ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; de2servo.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/DE2Servo/de2servo.vhd    ;         ;
-; servoclk.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/DE2Servo/servoclk.vhd    ;         ;
-; servopwm.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0sp1/DE2Servo/servopwm.vhd    ;         ;
-; servolinked.vhd                  ; yes             ; User VHDL File  ; C:/altera/13.0sp1/DE2Servo/servolinked.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; de2servo.vhd                     ; yes             ; User VHDL File  ; C:/Users/Rico/Desktop/EECE381M2/DE2Servo/de2servo.vhd    ;         ;
+; servoclk.vhd                     ; yes             ; User VHDL File  ; C:/Users/Rico/Desktop/EECE381M2/DE2Servo/servoclk.vhd    ;         ;
+; servopwm.vhd                     ; yes             ; User VHDL File  ; C:/Users/Rico/Desktop/EECE381M2/DE2Servo/servopwm.vhd    ;         ;
+; servolinked.vhd                  ; yes             ; User VHDL File  ; C:/Users/Rico/Desktop/EECE381M2/DE2Servo/servolinked.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -173,28 +173,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 159    ;
+; Estimated Total logic elements              ; 139    ;
 ;                                             ;        ;
-; Total combinational functions               ; 143    ;
+; Total combinational functions               ; 121    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 47     ;
-;     -- 3 input functions                    ; 34     ;
-;     -- <=2 input functions                  ; 62     ;
+;     -- 4 input functions                    ; 48     ;
+;     -- 3 input functions                    ; 24     ;
+;     -- <=2 input functions                  ; 49     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 67     ;
-;     -- arithmetic mode                      ; 76     ;
+;     -- normal mode                          ; 65     ;
+;     -- arithmetic mode                      ; 56     ;
 ;                                             ;        ;
-; Total registers                             ; 69     ;
-;     -- Dedicated logic registers            ; 69     ;
+; Total registers                             ; 64     ;
+;     -- Dedicated logic registers            ; 64     ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 30     ;
+; I/O pins                                    ; 45     ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; KEY[3] ;
 ; Maximum fan-out                             ; 35     ;
-; Total fan-out                               ; 598    ;
-; Average fan-out                             ; 2.47   ;
+; Total fan-out                               ; 531    ;
+; Average fan-out                             ; 2.31   ;
 +---------------------------------------------+--------+
 
 
@@ -203,13 +203,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Library Name ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
-; |de2servo                        ; 143 (40)          ; 69 (34)      ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |de2servo                                                   ; work         ;
-;    |servolinked:servoHorizontal| ; 58 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal                       ; work         ;
+; |de2servo                        ; 121 (31)          ; 64 (29)      ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |de2servo                                                   ; work         ;
+;    |servolinked:servoHorizontal| ; 60 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal                       ; work         ;
 ;       |servoclk:servoclk_map|    ; 17 (17)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal|servoclk:servoclk_map ; work         ;
-;       |servopwm:servopwm_map|    ; 41 (41)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal|servopwm:servopwm_map ; work         ;
-;    |servolinked:servoVertical|   ; 45 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical                         ; work         ;
+;       |servopwm:servopwm_map|    ; 43 (43)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoHorizontal|servopwm:servopwm_map ; work         ;
+;    |servolinked:servoVertical|   ; 30 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical                         ; work         ;
 ;       |servoclk:servoclk_map|    ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical|servoclk:servoclk_map   ; work         ;
-;       |servopwm:servopwm_map|    ; 41 (41)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical|servopwm:servopwm_map   ; work         ;
+;       |servopwm:servopwm_map|    ; 26 (26)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2servo|servolinked:servoVertical|servopwm:servopwm_map   ; work         ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -237,12 +237,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 69    ;
+; Total registers                              ; 64    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 35    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Clock Enable       ; 11    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -252,8 +252,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |de2servo|Vpos[7]          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |de2servo|Hpos[7]          ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |de2servo|Hpos[8]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -262,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -272,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 07 17:53:22 2015
+    Info: Processing started: Wed Apr 08 22:44:07 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2servo -c de2servo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file de2servo.vhd
@@ -289,6 +288,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file servoli
     Info (12023): Found entity 1: servolinked
 Info (12127): Elaborating entity "de2servo" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at de2servo.vhd(11): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at de2servo.vhd(12): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at de2servo.vhd(26): used implicit default value for signal "Vpos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "servolinked" for hierarchy "servolinked:servoVertical"
 Info (12128): Elaborating entity "servoclk" for hierarchy "servolinked:servoVertical|servoclk:servoclk_map"
 Info (12128): Elaborating entity "servopwm" for hierarchy "servolinked:servoVertical|servopwm:servopwm_map"
@@ -307,6 +308,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[0]" is stuck at GND
     Warning (13410): Pin "LEDG[1]" is stuck at GND
     Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 19 input pin(s) that do not drive logic
@@ -329,15 +345,15 @@ Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]"
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
-Info (21057): Implemented 189 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 184 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 3 output pins
+    Info (21059): Implemented 18 output pins
     Info (21060): Implemented 6 bidirectional pins
-    Info (21061): Implemented 159 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 485 megabytes
-    Info: Processing ended: Tue Apr 07 17:53:27 2015
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (21061): Implemented 139 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 519 megabytes
+    Info: Processing ended: Wed Apr 08 22:44:09 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

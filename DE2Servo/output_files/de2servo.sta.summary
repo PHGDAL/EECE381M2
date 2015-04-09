@@ -3,44 +3,44 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -2.959
-TNS   : -60.311
+Slack : -2.946
+TNS   : -40.191
 
 Type  : Slow Model Setup 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
-Slack : -1.658
-TNS   : -13.828
+Slack : -1.607
+TNS   : -13.440
 
 Type  : Slow Model Setup 'servolinked:servoVertical|servoclk:servoclk_map|temporal'
-Slack : -1.598
-TNS   : -13.388
+Slack : -1.558
+TNS   : -13.578
 
 Type  : Slow Model Setup 'GPIO_1[2]'
-Slack : -0.129
-TNS   : -0.593
+Slack : 0.045
+TNS   : 0.000
 
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : -2.558
-TNS   : -5.116
+Slack : -2.518
+TNS   : -5.036
+
+Type  : Slow Model Hold 'GPIO_1[2]'
+Slack : 0.523
+TNS   : 0.000
+
+Type  : Slow Model Hold 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
+Slack : 0.530
+TNS   : 0.000
 
 Type  : Slow Model Hold 'servolinked:servoVertical|servoclk:servoclk_map|temporal'
 Slack : 0.530
 TNS   : 0.000
 
-Type  : Slow Model Hold 'GPIO_1[2]'
-Slack : 0.535
-TNS   : 0.000
-
-Type  : Slow Model Hold 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
-Slack : 0.801
-TNS   : 0.000
-
 Type  : Slow Model Minimum Pulse Width 'GPIO_1[2]'
 Slack : -1.777
-TNS   : -17.777
+TNS   : -19.777
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -30.380
+TNS   : -23.380
 
 Type  : Slow Model Minimum Pulse Width 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
 Slack : -0.500
@@ -51,44 +51,44 @@ Slack : -0.500
 TNS   : -12.000
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : -0.684
-TNS   : -11.165
+Slack : -0.625
+TNS   : -6.443
 
 Type  : Fast Model Setup 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
-Slack : -0.219
-TNS   : -0.957
+Slack : -0.201
+TNS   : -0.765
 
 Type  : Fast Model Setup 'servolinked:servoVertical|servoclk:servoclk_map|temporal'
-Slack : -0.194
-TNS   : -0.731
+Slack : -0.165
+TNS   : -0.864
 
 Type  : Fast Model Setup 'GPIO_1[2]'
-Slack : 0.441
+Slack : 0.518
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
-Slack : -1.599
-TNS   : -3.352
+Slack : -1.561
+TNS   : -3.406
+
+Type  : Fast Model Hold 'GPIO_1[2]'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Fast Model Hold 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
+Slack : 0.243
+TNS   : 0.000
 
 Type  : Fast Model Hold 'servolinked:servoVertical|servoclk:servoclk_map|temporal'
 Slack : 0.243
 TNS   : 0.000
 
-Type  : Fast Model Hold 'GPIO_1[2]'
-Slack : 0.247
-TNS   : 0.000
-
-Type  : Fast Model Hold 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
-Slack : 0.358
-TNS   : 0.000
-
 Type  : Fast Model Minimum Pulse Width 'GPIO_1[2]'
 Slack : -1.777
-TNS   : -17.777
+TNS   : -19.777
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -30.380
+TNS   : -23.380
 
 Type  : Fast Model Minimum Pulse Width 'servolinked:servoHorizontal|servoclk:servoclk_map|temporal'
 Slack : -0.500

@@ -46,9 +46,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name VHDL_FILE de2servo.vhd
-set_global_assignment -name VHDL_FILE servoclk.vhd
-set_global_assignment -name VHDL_FILE servopwm.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -480,5 +477,8 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
+set_global_assignment -name VHDL_FILE de2servo.vhd
+set_global_assignment -name VHDL_FILE servoclk.vhd
+set_global_assignment -name VHDL_FILE servopwm.vhd
 set_global_assignment -name VHDL_FILE servolinked.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

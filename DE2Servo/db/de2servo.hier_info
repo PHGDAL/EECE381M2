@@ -1,13 +1,5 @@
 |de2servo
 CLOCK_50 => servolinked:servoVertical.clk
-CLOCK_50 => Vpos[0].CLK
-CLOCK_50 => Vpos[1].CLK
-CLOCK_50 => Vpos[2].CLK
-CLOCK_50 => Vpos[3].CLK
-CLOCK_50 => Vpos[4].CLK
-CLOCK_50 => Vpos[5].CLK
-CLOCK_50 => Vpos[6].CLK
-CLOCK_50 => Vpos[7].CLK
 CLOCK_50 => Hpos[0].CLK
 CLOCK_50 => Hpos[1].CLK
 CLOCK_50 => Hpos[2].CLK
@@ -16,6 +8,7 @@ CLOCK_50 => Hpos[4].CLK
 CLOCK_50 => Hpos[5].CLK
 CLOCK_50 => Hpos[6].CLK
 CLOCK_50 => Hpos[7].CLK
+CLOCK_50 => Hpos[8].CLK
 CLOCK_50 => Abbey.CLK
 CLOCK_50 => current_state.CLK
 CLOCK_50 => servolinked:servoHorizontal.clk
@@ -42,9 +35,24 @@ KEY[3] => servolinked:servoVertical.reset
 KEY[3] => servolinked:servoHorizontal.reset
 GPIO_1[0] <> GPIO_1[0]
 GPIO_1[1] <> GPIO_1[1]
-LEDG[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= LEDG[0].DB_MAX_OUTPUT_PORT_TYPE
 LEDG[1] <= LEDG[1].DB_MAX_OUTPUT_PORT_TYPE
 LEDG[2] <= LEDG[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= LEDG[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[4] <= LEDG[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[5] <= LEDG[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[6] <= LEDG[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[7] <= LEDG[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[8] <= LEDG[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= LEDR[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= LEDR[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= LEDR[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= LEDR[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= LEDR[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |de2servo|servolinked:servoVertical
@@ -57,6 +65,7 @@ pos[4] => servopwm:servopwm_map.pos[4]
 pos[5] => servopwm:servopwm_map.pos[5]
 pos[6] => servopwm:servopwm_map.pos[6]
 pos[7] => servopwm:servopwm_map.pos[7]
+pos[8] => servopwm:servopwm_map.pos[8]
 reset => servoclk:servoclk_map.reset
 reset => servopwm:servopwm_map.reset
 servo <= servopwm:servopwm_map.servo
@@ -111,14 +120,15 @@ reset => cnt[8].ACLR
 reset => cnt[9].ACLR
 reset => cnt[10].ACLR
 reset => cnt[11].ACLR
-pos[0] => Add0.IN16
-pos[1] => Add0.IN15
-pos[2] => Add0.IN14
-pos[3] => Add0.IN13
-pos[4] => Add0.IN12
-pos[5] => Add0.IN11
-pos[6] => Add0.IN10
-pos[7] => Add0.IN9
+pos[0] => Add0.IN18
+pos[1] => Add0.IN17
+pos[2] => Add0.IN16
+pos[3] => Add0.IN15
+pos[4] => Add0.IN14
+pos[5] => Add0.IN13
+pos[6] => Add0.IN12
+pos[7] => Add0.IN11
+pos[8] => Add0.IN10
 servo <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -132,6 +142,7 @@ pos[4] => servopwm:servopwm_map.pos[4]
 pos[5] => servopwm:servopwm_map.pos[5]
 pos[6] => servopwm:servopwm_map.pos[6]
 pos[7] => servopwm:servopwm_map.pos[7]
+pos[8] => servopwm:servopwm_map.pos[8]
 reset => servoclk:servoclk_map.reset
 reset => servopwm:servopwm_map.reset
 servo <= servopwm:servopwm_map.servo
@@ -186,14 +197,15 @@ reset => cnt[8].ACLR
 reset => cnt[9].ACLR
 reset => cnt[10].ACLR
 reset => cnt[11].ACLR
-pos[0] => Add0.IN16
-pos[1] => Add0.IN15
-pos[2] => Add0.IN14
-pos[3] => Add0.IN13
-pos[4] => Add0.IN12
-pos[5] => Add0.IN11
-pos[6] => Add0.IN10
-pos[7] => Add0.IN9
+pos[0] => Add0.IN18
+pos[1] => Add0.IN17
+pos[2] => Add0.IN16
+pos[3] => Add0.IN15
+pos[4] => Add0.IN14
+pos[5] => Add0.IN13
+pos[6] => Add0.IN12
+pos[7] => Add0.IN11
+pos[8] => Add0.IN10
 servo <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 

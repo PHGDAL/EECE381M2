@@ -6,7 +6,7 @@ entity servopwm is
     PORT (
         clk   : IN  STD_LOGIC;
         reset : IN  STD_LOGIC;
-        pos   : IN  STD_LOGIC_VECTOR(7 downto 0);
+        pos   : IN  STD_LOGIC_VECTOR(8 downto 0);
         servo : OUT STD_LOGIC
     );
 end servopwm;
@@ -15,7 +15,7 @@ architecture Behavioral of servopwm is
     -- Counter, from 0 to 2000.
     signal cnt : unsigned(11 downto 0);
     -- Temporal signal used to generate the PWM pulse.
-    signal pwmi: unsigned(8 downto 0);
+    signal pwmi: unsigned(9 downto 0);
 begin
     -- Minimum value should be 0.6ms.
     pwmi <= unsigned('0' & pos) + 39;
